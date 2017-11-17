@@ -8,17 +8,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:190185387443:android:376ab0107f6c7d5d",
+        "mobilesdk_app_id": "1:190185387443:android:a3f1bd1e44601506",
         "android_client_info": {
-          "package_name": "com.example.vitorg.receitas"
+          "package_name": "com.example.asus.receitas"
         }
       },
       "oauth_client": [
         {
-          "client_id": "190185387443-ufediv2m5pr88r4c5jr1idtrlkm1ffjg.apps.googleusercontent.com",
+          "client_id": "190185387443-41ih1qt9psk1si0kunufnla4vf2er0b0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.vitorg.receitas",
+            "package_name": "com.example.asus.receitas",
             "certificate_hash": "4dc476ea8528553816afa4a90496daf534fdd50e"
           }
         },
