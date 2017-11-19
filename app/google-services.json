@@ -49,6 +49,50 @@
           "status": 2
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190185387443:android:674cdd56e9a4ff88",
+        "android_client_info": {
+          "package_name": "com.example.vitorg.myapplication33"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "190185387443-flgfcduoniqqmac4om8gc8c59765djl9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vitorg.myapplication33",
+            "certificate_hash": "4dc476ea8528553816afa4a90496daf534fdd50e"
+          }
+        },
+        {
+          "client_id": "190185387443-fqsb017eh8rad2dnugoanimaphiog8j8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABmCz1sCZgA8fbctDGmKKon-IsynyvOoU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "190185387443-fqsb017eh8rad2dnugoanimaphiog8j8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
     }
   ],
   "configuration_version": "1"
