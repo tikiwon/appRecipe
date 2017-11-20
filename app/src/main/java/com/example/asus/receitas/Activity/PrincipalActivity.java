@@ -33,12 +33,12 @@ public class PrincipalActivity extends AppCompatActivity {
         edtEmailLogin   = (EditText)findViewById(R.id.edtEmail);
         edtSenhaLogin   = (EditText)findViewById(R.id.edtSenha);
         btnLogin        = (Button)findViewById(R.id.btnLogin);
-        btnCadastro  = (Button)findViewById(R.id.btnCadstro);
+        btnCadastro     = (Button)findViewById(R.id.btnCadstro);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
         @Override
 
-           public void onClick (View view) {
+            public void onClick (View view) {
                 if(!edtEmailLogin.getText().toString().equals("") && !edtSenhaLogin.getText().toString().equals("")){
 
                     usuario = new Usuario();
@@ -50,6 +50,13 @@ public class PrincipalActivity extends AppCompatActivity {
                 }else{
                     Toast.makeText(PrincipalActivity.this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        btnCadastro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                abrirTelaCadastro();
             }
         });
     }
@@ -77,6 +84,11 @@ public class PrincipalActivity extends AppCompatActivity {
 
     private void abrirTelaForum(){
         Intent intent = new Intent(PrincipalActivity.this, ForumActivity.class);
+        startActivity(intent);
+    }
+
+    private void abrirTelaCadastro(){
+        Intent intent = new Intent(PrincipalActivity.this,CadastroUsuarioActivity.class);
         startActivity(intent);
     }
 }
