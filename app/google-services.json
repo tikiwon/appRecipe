@@ -1,35 +1,27 @@
 {
   "project_info": {
-    "project_number": "190185387443",
-    "firebase_url": "https://receitas-e3df0.firebaseio.com",
-    "project_id": "receitas-e3df0",
-    "storage_bucket": "receitas-e3df0.appspot.com"
+    "project_number": "1063753862439",
+    "firebase_url": "https://receitas2-ccd77.firebaseio.com",
+    "project_id": "receitas2-ccd77",
+    "storage_bucket": "receitas2-ccd77.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:190185387443:android:a3f1bd1e44601506",
+        "mobilesdk_app_id": "1:1063753862439:android:4d973ce8611ae520",
         "android_client_info": {
-          "package_name": "com.example.asus.receitas"
+          "package_name": "com.android.application"
         }
       },
       "oauth_client": [
         {
-          "client_id": "190185387443-41ih1qt9psk1si0kunufnla4vf2er0b0.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.asus.receitas",
-            "certificate_hash": "4dc476ea8528553816afa4a90496daf534fdd50e"
-          }
-        },
-        {
-          "client_id": "190185387443-fqsb017eh8rad2dnugoanimaphiog8j8.apps.googleusercontent.com",
+          "client_id": "1063753862439-r7rco4k8dr342i6nq68jp54vn89prsar.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyABmCz1sCZgA8fbctDGmKKon-IsynyvOoU"
+          "current_key": "AIzaSyDZKFteGxQq_mrjSqcEeTrSTss9bK0JVQQ"
         }
       ],
       "services": {
@@ -37,13 +29,8 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "190185387443-fqsb017eh8rad2dnugoanimaphiog8j8.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2
@@ -52,28 +39,20 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:190185387443:android:674cdd56e9a4ff88",
+        "mobilesdk_app_id": "1:1063753862439:android:a3f1bd1e44601506",
         "android_client_info": {
-          "package_name": "com.example.vitorg.myapplication33"
+          "package_name": "com.example.asus.receitas"
         }
       },
       "oauth_client": [
         {
-          "client_id": "190185387443-flgfcduoniqqmac4om8gc8c59765djl9.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.vitorg.myapplication33",
-            "certificate_hash": "4dc476ea8528553816afa4a90496daf534fdd50e"
-          }
-        },
-        {
-          "client_id": "190185387443-fqsb017eh8rad2dnugoanimaphiog8j8.apps.googleusercontent.com",
+          "client_id": "1063753862439-r7rco4k8dr342i6nq68jp54vn89prsar.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyABmCz1sCZgA8fbctDGmKKon-IsynyvOoU"
+          "current_key": "AIzaSyDZKFteGxQq_mrjSqcEeTrSTss9bK0JVQQ"
         }
       ],
       "services": {
@@ -81,13 +60,8 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "190185387443-fqsb017eh8rad2dnugoanimaphiog8j8.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2

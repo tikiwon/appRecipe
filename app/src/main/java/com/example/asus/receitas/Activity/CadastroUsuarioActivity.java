@@ -52,91 +52,93 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
             btnCadastrar = (Button) findViewById(R.id.btnCadstro);
             btnCancelar = (Button) findViewById(R.id.btnCancelar);
 
+            //botao cancelar
+            btnCancelar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    abrirTelaLogin();
+                }
+            });
 
+            //botao cadastrar
             btnCadastrar.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
 
-            @Override
-            public void onClick(View v){
-                //valida se todos os campos estão preenchidos
-                if(!email.getText().toString().equals("")
-                        && !senha1.getText().toString().equals("")
-                        && !senha2.getText().toString().equals("")
-                        && !apelido.getText().toString().equals("")){
-
-                    //se tudo estiver preenchido
-                    if(senha1.getText().toString().equals(senha2.getText().toString())) {
-
+                    if (senha1.getText().toString().equals(senha2.getText().toString())) {
                         usuario = new Usuario();
+
                         usuario.setEmail(email.getText().toString());
                         usuario.setSenha(senha1.getText().toString());
-                        usuario.setApelido(apelido.getText().toString());
+                        //usuario.setApelido(apelido.getText().toString());
 
-                        //cadastrarUsuario();
+                        //chamada de método para cadastro de usuários
+                        cadastrarUsuario();
 
-                    }else{
-                        Toast.makeText(CadastroUsuarioActivity.this, "Senhas divergentes", Toast.LENGTH_LONG).show();
-                        //senhas nao correspondentes
+                    } else {
+                        Toast.makeText(CadastroUsuarioActivity.this, "As senhas não se correspondem!", Toast.LENGTH_LONG).show();
                     }
-                }else{
-                    //campo ausente de preenchimento
-                    Toast.makeText(CadastroUsuarioActivity.this, "Preencha todos os campos", Toast.LENGTH_LONG).show();
                 }
-            }
-        });
-     }
+            });
+    }
 
-    private void cadastrarUsuario(){
+    private void cadastrarUsuario() {
 
         autenticacao = ConfiguracaoFirebase.getFirebaseAuth();
         autenticacao.createUserWithEmailAndPassword(
-                 usuario.getEmail(),
-                 usuario.getSenha()
+                usuario.getEmail(),
+                usuario.getSenha()
+
         ).addOnCompleteListener(CadastroUsuarioActivity.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
+
+                if (task.isSuccessful()) {
 
                     insereUsuario(usuario);
 
-                }else{
+                } else {
+
                     String erroExcecao = "";
 
-                    try{
+                    try {
                         throw task.getException();
-                    }catch (FirebaseAuthInvalidCredentialsException e){
-                        erroExcecao = "Email digitado inválido, tente outro email";
-                    }catch (FirebaseAuthInvalidUserException e){
-                        erroExcecao = "Usuario inválido";
-                    }catch (FirebaseAuthUserCollisionException e){
-                        erroExcecao = "Email já cadastrado";
-                    }catch (FirebaseAuthActionCodeException e){
-                        erroExcecao += "Código: " + e;
-                    }catch (Exception e){
-                        erroExcecao = "Erro ao efetuar cadastro";
+                    } catch (FirebaseAuthInvalidCredentialsException e) {
+                        erroExcecao = "O e-mail digitado é invalido, digite um novo e-mail";
+                    } catch (FirebaseAuthUserCollisionException e) {
+                        erroExcecao = "Esse e-mail já está cadastro!";
+                    }catch (FirebaseAuthActionCodeException e) {
+                        erroExcecao = "Authcodeerror"+e;
+                    } catch (Exception e) {
+                        erroExcecao = "Erro ao efetuar o cadastro!"+e;
                         e.printStackTrace();
                     }
+
+                    Toast.makeText(CadastroUsuarioActivity.this, "Erro: " + erroExcecao, Toast.LENGTH_LONG).show();
                 }
             }
         });
     }
 
-    private boolean insereUsuario(Usuario usuario){
-        try{
+    private boolean insereUsuario(Usuario usuario) {
+
+        try {
 
             reference = ConfiguracaoFirebase.getFirebase().child("usuarios");
             reference.push().setValue(usuario);
-
-            Toast.makeText(CadastroUsuarioActivity.this, "Cadastrado com sucesso!", Toast.LENGTH_LONG).show();
-
+            Toast.makeText(CadastroUsuarioActivity.this, "Usuário cadastrado com sucesso!", Toast.LENGTH_LONG).show();
             return true;
 
-        }catch (Exception e){
-            Toast.makeText(CadastroUsuarioActivity.this, "Erro ao gravar o usuário", Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toast.makeText(CadastroUsuarioActivity.this, "Erro ao gravar o usuário!", Toast.LENGTH_LONG).show();
             e.printStackTrace();
-
             return false;
         }
     }
 
-        }
+    private void abrirTelaLogin(){
+        Intent intent = new Intent(CadastroUsuarioActivity.this, PrincipalActivity.class);
+        startActivity(intent);
     }
+
+}
