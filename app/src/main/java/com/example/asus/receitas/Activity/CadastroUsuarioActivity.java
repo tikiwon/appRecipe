@@ -97,6 +97,7 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
 
                     insereUsuario(usuario);
 
+
                 } else {
 
                     String erroExcecao = "";
