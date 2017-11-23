@@ -1,5 +1,6 @@
 package com.example.asus.receitas.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -57,10 +58,11 @@ public class Activity_Drawer extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.activity__drawer, menu);
+        getMenuInflater().inflate(R.menu.activity__drawer_upper, menu);
         return true;
     }
 
+    //Menu tres pontinhos superior
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -70,6 +72,7 @@ public class Activity_Drawer extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            abrirTelaPrincipalActivity();
             return true;
         }
 
@@ -122,5 +125,10 @@ public class Activity_Drawer extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void abrirTelaPrincipalActivity(){
+        Intent intent = new Intent (Activity_Drawer.this, PrincipalActivity.class);
+        startActivity(intent);
     }
 }
