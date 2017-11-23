@@ -65,18 +65,30 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (senha1.getText().toString().equals(senha2.getText().toString())) {
-                    usuario = new Usuario();
+                //valida se todos os campos estão preenchidos
+                if(!email.getText().toString().equals("")
+                        && !senha1.getText().toString().equals("")
+                        && !senha2.getText().toString().equals("")
+                        && !apelido.getText().toString().equals("")) {
 
-                    usuario.setEmail(email.getText().toString());
-                    usuario.setSenha(senha1.getText().toString());
-                    //usuario.setApelido(apelido.getText().toString());
+                    //se tudo estiver preenchido
+                    if (senha1.getText().toString().equals( senha2.getText().toString() )) {
+                        if (senha1.getText().toString().length() >=6 && senha2.getText().toString().length() >= 6) {
+                            usuario = new Usuario();
+                            usuario.setEmail( email.getText().toString() );
+                            usuario.setSenha( senha1.getText().toString() );
+                            usuario.setApelido( apelido.getText().toString() );
 
-                    //chamada de método para cadastro de usuários
-                    cadastrarUsuario();
+                            cadastrarUsuario();
 
-                } else {
-                    Toast.makeText(CadastroUsuarioActivity.this, "As senhas não se correspondem!", Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText( CadastroUsuarioActivity.this, "A senha precisa ter pelo menos 6 caracteres", Toast.LENGTH_LONG ).show();
+                        }
+                    } else {
+                        Toast.makeText( CadastroUsuarioActivity.this, "Senhas divergentes", Toast.LENGTH_LONG ).show();
+                    }
+                }else{
+                    Toast.makeText( CadastroUsuarioActivity.this, "Preencha todos os campos", Toast.LENGTH_LONG ).show();
                 }
             }
         });
@@ -96,7 +108,6 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
 
                     insereUsuario(usuario);
-
 
                 } else {
 

@@ -14,6 +14,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
 import com.example.asus.receitas.R;
 
 public class Activity_Drawer extends AppCompatActivity
@@ -72,6 +74,7 @@ public class Activity_Drawer extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Toast.makeText(Activity_Drawer.this, "Deslogado com sucesso", Toast.LENGTH_LONG).show();
             abrirTelaPrincipalActivity();
             return true;
         }
