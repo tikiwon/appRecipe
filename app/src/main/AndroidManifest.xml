@@ -26,6 +26,15 @@
         </activity>
         <activity android:name=".Activity.ForumActivity" />
         <activity android:name=".Activity.CadastroUsuarioActivity" />
+        <activity
+            android:name=".Activity.Activity_Drawer"
+            android:label="@string/title_activity__drawer"
+            android:parentActivityName=".Activity.PrincipalActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.asus.receitas.Activity.PrincipalActivity" />
+        </activity>
     </application>
 
 </manifest>

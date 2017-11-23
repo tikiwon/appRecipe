@@ -52,35 +52,35 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
             btnCadastrar = (Button) findViewById(R.id.btnCadstro);
             btnCancelar = (Button) findViewById(R.id.btnCancelar);
 
-            //botao cancelar
-            btnCancelar.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    abrirTelaLogin();
+        //botao cancelar
+        btnCancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                abrirTelaLogin();
+            }
+        });
+
+        //botao cadastrar
+        btnCadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (senha1.getText().toString().equals(senha2.getText().toString())) {
+                    usuario = new Usuario();
+
+                    usuario.setEmail(email.getText().toString());
+                    usuario.setSenha(senha1.getText().toString());
+                    //usuario.setApelido(apelido.getText().toString());
+
+                    //chamada de método para cadastro de usuários
+                    cadastrarUsuario();
+
+                } else {
+                    Toast.makeText(CadastroUsuarioActivity.this, "As senhas não se correspondem!", Toast.LENGTH_LONG).show();
                 }
-            });
-
-            //botao cadastrar
-            btnCadastrar.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
-                    if (senha1.getText().toString().equals(senha2.getText().toString())) {
-                        usuario = new Usuario();
-
-                        usuario.setEmail(email.getText().toString());
-                        usuario.setSenha(senha1.getText().toString());
-                        //usuario.setApelido(apelido.getText().toString());
-
-                        //chamada de método para cadastro de usuários
-                        cadastrarUsuario();
-
-                    } else {
-                        Toast.makeText(CadastroUsuarioActivity.this, "As senhas não se correspondem!", Toast.LENGTH_LONG).show();
-                    }
-                }
-            });
-    }
+            }
+        });
+     }
 
     private void cadastrarUsuario() {
 

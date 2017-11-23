@@ -5,21 +5,31 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_comidas"
+            android:id="@+id/nav_comida"
             android:icon="@drawable/ic_menu_comida"
-            android:title="Receitas de comida" />
+            android:title="Receitas de Comida" />
         <item
             android:id="@+id/nav_sobremesa"
-            android:icon="@drawable/ic_menu_sobremesas"
-            android:title="Receitas de sobremesa" />
+            android:icon="@drawable/ic_menu_sobremesa"
+            android:title="Receitas de Sobremesa" />
         <item
             android:id="@+id/nav_batidas"
-            android:icon="@drawable/ic_menu_batidas"
-            android:title="Receitas de batida" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_mural"
-            android:title="Mural" />
+            android:icon="@drawable/ic_menu_batida"
+            android:title="Receitas de Batidas" />
+
     </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_forum"
+                android:icon="@drawable/ic_menu_forum"
+                android:title="Forum" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
 
 </menu>

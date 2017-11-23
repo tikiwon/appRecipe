@@ -3,11 +3,9 @@ package com.example.asus.receitas.Activity;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.*;
+import android.view.*;
 import android.content.*;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
 import com.example.asus.receitas.Classes.Usuario;
 import com.example.asus.receitas.DAO.ConfiguracaoFirebase;
@@ -16,17 +14,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 
 public class PrincipalActivity extends AppCompatActivity {
 
     private FirebaseAuth autenticacao;
-    private DatabaseReference referenciaFirebase;
     private EditText edtEmailLogin;
     private EditText edtSenhaLogin;
     private Button btnLogin;
@@ -43,12 +35,6 @@ public class PrincipalActivity extends AppCompatActivity {
         btnLogin        = (Button)findViewById(R.id.btnLogin);
         btnCadastro     = (Button)findViewById(R.id.btnCadstro);
 
-        autenticacao = FirebaseAuth.getInstance();
-
-        referenciaFirebase = FirebaseDatabase.getInstance().getReference();
-
-
-        //Botao Login
         btnLogin.setOnClickListener(new View.OnClickListener() {
         @Override
 
@@ -67,7 +53,6 @@ public class PrincipalActivity extends AppCompatActivity {
             }
         });
 
-        //botao cadastrar
         btnCadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,9 +68,9 @@ public class PrincipalActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
 
-                if (task.isSuccessful()) {
+                if(task.isSuccessful()){
 
-                    abrirTelaForum();
+                    abrirTelaDrawer();
 
                     Toast.makeText(PrincipalActivity.this, "Login efetuado com sucesso", Toast.LENGTH_SHORT).show();
                 }else{
@@ -97,13 +82,13 @@ public class PrincipalActivity extends AppCompatActivity {
 
     }
 
-    private void abrirTelaForum(){
-        Intent intent = new Intent(PrincipalActivity.this, ForumActivity.class);
+    private void abrirTelaDrawer(){
+        Intent intent = new Intent(PrincipalActivity.this, Activity_Drawer.class);
         startActivity(intent);
     }
 
     private void abrirTelaCadastro(){
-        Intent intent = new Intent(PrincipalActivity.this,CadastroUsuarioActivity.class);
+        Intent intent = new Intent(PrincipalActivity.this, CadastroUsuarioActivity.class);
         startActivity(intent);
     }
 }

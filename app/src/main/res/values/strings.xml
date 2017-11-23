@@ -18,6 +18,10 @@
     <string name="error_incorrect_password">Email ou senha incorretos</string>
     <string name="error_field_required">Preencher campo</string>
     <string name="permission_rationale">"Email ou senha incorretos"</string>
+    <string name="title_activity__drawer">Activity_Drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- Strings related to register -->
 </resources>
