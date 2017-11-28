@@ -73,8 +73,11 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
 
                     //se tudo estiver preenchido
                     if (senha1.getText().toString().equals( senha2.getText().toString() )) {
-                        if (senha1.getText().toString().length() >=6 && senha2.getText().toString().length() >= 6) {
+                        if (senha1.getText().toString().length() >=6
+                                && senha2.getText().toString().length() >= 6) {
+
                             usuario = new Usuario();
+
                             usuario.setEmail( email.getText().toString() );
                             usuario.setSenha( senha1.getText().toString() );
                             usuario.setApelido( apelido.getText().toString() );
