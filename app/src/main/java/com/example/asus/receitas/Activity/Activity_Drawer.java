@@ -18,6 +18,10 @@ import android.widget.Toast;
 
 import com.example.asus.receitas.R;
 
+/**
+ * The type Activity drawer.
+ */
+
 public class Activity_Drawer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
