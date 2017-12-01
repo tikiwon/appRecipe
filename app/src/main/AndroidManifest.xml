@@ -35,6 +35,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.asus.receitas.Activity.PrincipalActivity" />
         </activity>
+        <activity android:name=".Activity.ActivityReceitaParmegiana" />
+        <activity android:name=".Activity.ActivityReceitaPicadinho" />
+        <activity android:name=".Activity.ActivityReceitaMadeira" />
+        <activity android:name=".Activity.ActivityReceitaPudim" />
+        <activity android:name=".Activity.ActivityReceitaFrutas" />
+        <activity android:name=".Activity.ActivityReceitaChocolate" />
+        <activity android:name=".Activity.ActivityReceitaCaipirinha" />
+        <activity android:name=".Activity.ActivityReceitaEspanhola" />
+        <activity android:name=".Activity.ActivityReceitaCoquetel"></activity>
     </application>
 
 </manifest>

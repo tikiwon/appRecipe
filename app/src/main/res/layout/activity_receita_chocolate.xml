@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.receitas.Activity.ActivityReceitaChocolate">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bolo de Chocolate"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="239dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/bolo"
+                    tools:layout_editor_absoluteX="0dp" />
+
+                <RatingBar
+                    android:id="@+id/Estrelas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:rating="3" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Ingredientes: \n
+*4 ovos \n
+*4 colheres (sopa) de chocolate em pó \n
+*2 colheres (sopa) de manteiga \n
+*3 xícaras (chá) de farinha de trigo \n
+*2 xícaras (chá) de açúcar \n
+*2 colheres (sopa) de fermento \n
+*1 xícara (chá) de leite
+*2 colheres (sopa) de manteiga \n
+*7 colheres (sopa) de chocolate em pó \n
+*2 latas de creme de leite com soro \n
+*3 colheres (sopa) de açúcar \n
+\n
+Preparo da massa: \n
+1 - Em um liquidificador adicione os ovos, o chocolate em pó, a manteiga, a farinha de trigo, o açúcar e o leite, depois bata por 5 minutos \n
+2 - Adicione o fermento e misture com uma espátula delicadamente \n
+3 - Em uma forma untada, despeje a massa e asse em forno médio 180 ºC, preaquecido por cerca de 40 minutos \n
+\n
+Preparo da calda: \n
+1 - Em uma panela, aqueça a manteiga e misture o chocolate em pó até que esteja homogêneo \n
+2 - Acrescente o creme de leite e misture bem até obter uma consistência cremosa\n
+3 - Desligue o fogo e acrescente o açúcar \n" />
+            </LinearLayout>
+        </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

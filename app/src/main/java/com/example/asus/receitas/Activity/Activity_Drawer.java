@@ -2,10 +2,7 @@ package com.example.asus.receitas.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -16,11 +13,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.asus.receitas.Fragments.BatidaFragment;
+import com.example.asus.receitas.Fragments.ComidaFragment;
+import com.example.asus.receitas.Fragments.ForumFragment;
+import com.example.asus.receitas.Fragments.SendFragment;
+import com.example.asus.receitas.Fragments.SobremesaFragment;
 import com.example.asus.receitas.R;
-
-/**
- * The type Activity drawer.
- */
 
 public class Activity_Drawer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -33,16 +31,7 @@ public class Activity_Drawer extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-// Menu trez pontinhos
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-//
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);

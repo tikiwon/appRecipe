@@ -1,8 +1,8 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.asus.receitas.Activity.BatidaFragment">
+    tools:context="com.example.asus.receitas.Fragments.BatidaFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -24,10 +24,10 @@
 
 
         <ListView
-            android:id="@+id/fragmentBatida"
+            android:id="@+id/menuBatidas"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
     </LinearLayout>
 
-</FrameLayout>
+</RelativeLayout>

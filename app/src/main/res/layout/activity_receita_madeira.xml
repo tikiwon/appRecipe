@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.receitas.Activity.ActivityReceitaMadeira">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Filé Mignon ao Molho Madeira"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="239dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/madeira"
+                    tools:layout_editor_absoluteX="0dp" />
+
+                <RatingBar
+                    android:id="@+id/Estrelas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:rating="4" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Ingredientes: \n
+*1/2 kg de filé mignon em cubos \n
+*3 colheres de sopa de azeite \n
+*1 cebola picadinha \n
+*2 dentes de alho amassados \n
+*1 tablete de caldo de carne \n
+*Sal se necessário \n
+*Pimenta calabresa a gosto \n
+*1/2 copo americano de vinho branco \n
+*1 vidro de molho madeira 340 g \n
+*1 vidro pequeno de champignon \n
+\n
+Preparo do Filé: \n
+1 - Dourar a carne com a cebola e o alho no azeite \n
+2 - Acrescentar os demais ingredientes \n
+3 - Deixar por 5 minutos, desligar e servir" />
+            </LinearLayout>
+        </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
