@@ -74,3 +74,12 @@ Fragments
        
 
 ![alt text](https://cdn57.androidauthority.net/wp-content/uploads/2017/05/android-studio-logo-840x359.png)
+
+
+      
+Diagrama de sequência
+![alt text](https://imgur.com/a/QODLh)
+
+
+Diagrama de classe
+![alt text](https://imgur.com/a/bLP5b)
