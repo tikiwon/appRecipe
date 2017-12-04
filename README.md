@@ -78,7 +78,7 @@ Fragments
 
       
 Diagrama de sequência
-![alt text](https://imgur.com/a/QODLh.png)
+![alt text](https://i.imgur.com/539ERAL.png)
 
 
 Diagrama de classe
