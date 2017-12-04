@@ -83,3 +83,7 @@ Diagrama de sequência
 
 Diagrama de classe
 ![alt text](https://i.imgur.com/j1zu8jK.png)
+
+![alt text](https://i.imgur.com/H3bV4Zp.jpg)
+![alt text](https://i.imgur.com/Xb4hRgK.jpg)
+![alt text](https://i.imgur.com/HHan8KC.jpg)
