@@ -39,7 +39,6 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
 
     private Usuario usuario;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,43 +64,47 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                //valida se todos os campos estão preenchidos
-                if(!email.getText().toString().equals("")
-                        && !senha1.getText().toString().equals("")
-                        && !senha2.getText().toString().equals("")
-                        && !apelido.getText().toString().equals("")) {
-
-                    //se tudo estiver preenchido
-                    if (senha1.getText().toString().equals( senha2.getText().toString() )) {
-                        if (senha1.getText().toString().length() >=6
-                                && senha2.getText().toString().length() >= 6) {
-
-                            //instancia o objeto usuario
-                            usuario = new Usuario();
-
-                            //seta os valores no objeto
-                            usuario.setEmail( email.getText().toString() );
-                            usuario.setSenha( senha1.getText().toString() );
-                            usuario.setApelido( apelido.getText().toString() );
-
-                            cadastrarUsuario();
-
-                        //senha menor de 6 caracteres
-                        } else {
-                            Toast.makeText( CadastroUsuarioActivity.this, "A senha precisa ter pelo menos 6 caracteres", Toast.LENGTH_LONG ).show();
-                        }
-                    //senhas divergentes
-                    } else {
-                        Toast.makeText( CadastroUsuarioActivity.this, "Senhas divergentes", Toast.LENGTH_LONG ).show();
-                    }
-                //alguns capos vazios
-                }else{
-                    Toast.makeText( CadastroUsuarioActivity.this, "Preencha todos os campos", Toast.LENGTH_LONG ).show();
-                }
+                validaDadosCadastro();
             }
         });
-     }
+    }
+
+    //Valida dados e chama outros métodos
+    private void validaDadosCadastro(){
+        //valida se todos os campos estão preenchidos
+        if(!email.getText().toString().equals("")
+                && !senha1.getText().toString().equals("")
+                && !senha2.getText().toString().equals("")
+                && !apelido.getText().toString().equals("")) {
+
+            //se tudo estiver preenchido
+            if (senha1.getText().toString().equals( senha2.getText().toString() )) {
+                if (senha1.getText().toString().length() >=6
+                        && senha2.getText().toString().length() >= 6) {
+
+                    //instancia o objeto usuario
+                    usuario = new Usuario();
+
+                    //seta os valores no objeto
+                    usuario.setEmail( email.getText().toString() );
+                    usuario.setSenha( senha1.getText().toString() );
+                    usuario.setApelido( apelido.getText().toString() );
+
+                    cadastrarUsuario();
+
+                    //senha menor de 6 caracteres
+                } else {
+                    Toast.makeText( CadastroUsuarioActivity.this, "A senha precisa ter pelo menos 6 caracteres", Toast.LENGTH_LONG ).show();
+                }
+                //senhas divergentes
+            } else {
+                Toast.makeText( CadastroUsuarioActivity.this, "Senhas divergentes", Toast.LENGTH_LONG ).show();
+            }
+            //alguns capos vazios
+        }else{
+            Toast.makeText( CadastroUsuarioActivity.this, "Preencha todos os campos", Toast.LENGTH_LONG ).show();
+        }
+    }
 
     //prepara a tarefa de atutenticação de usuário
     private void cadastrarUsuario() {
@@ -113,8 +116,8 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
                 usuario.getEmail(),
                 usuario.getSenha()
 
-        //quando passado os dados, os sistema fica aguardando uma resposta,
-        //pra passar os dados recebidos para a proxima etapa
+                //quando passado os dados, os sistema fica aguardando uma resposta,
+                //pra passar os dados recebidos para a proxima etapa
         ).addOnCompleteListener(CadastroUsuarioActivity.this, new OnCompleteListener<AuthResult>() {
             //recebeu os dados do firebase
             @Override
@@ -123,7 +126,7 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     //proxima etapa
                     insereUsuario(usuario);
-                //se falha
+                    //se falha
                 } else {
                     //instancia uma variavel de excecao
                     String erroExcecao = "";
@@ -149,6 +152,7 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
         });
     }
 
+    //envia para o firebase e trata erros
     private boolean insereUsuario(Usuario usuario) {
 
         try {

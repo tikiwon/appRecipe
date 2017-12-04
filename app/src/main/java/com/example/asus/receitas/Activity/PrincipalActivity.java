@@ -79,16 +79,6 @@ public class PrincipalActivity extends AppCompatActivity {
         });
     }
 
-    private void abrirTelaDrawer(){
-        Intent intent = new Intent(PrincipalActivity.this, Activity_Drawer.class);
-        startActivity(intent);
-    }
-
-    private void abrirTelaCadastro(){
-        Intent intent = new Intent(PrincipalActivity.this, CadastroUsuarioActivity.class);
-        startActivity(intent);
-    }
-
     private void  validaCamposLogin(){
         if(!edtEmailLogin.getText().toString().equals("") && !edtSenhaLogin.getText().toString().equals("")){
 
@@ -101,5 +91,15 @@ public class PrincipalActivity extends AppCompatActivity {
         }else{
             Toast.makeText(PrincipalActivity.this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void abrirTelaDrawer(){
+        Intent intent = new Intent(PrincipalActivity.this, Activity_Drawer.class);
+        startActivity(intent);
+    }
+
+    private void abrirTelaCadastro(){
+        Intent intent = new Intent(PrincipalActivity.this, CadastroUsuarioActivity.class);
+        startActivity(intent);
     }
 }
