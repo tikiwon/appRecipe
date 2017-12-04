@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.receitas.Activity.ActivityReceitaPicadinho">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Picadinho de Carne com Legumes"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="239dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/picadinho"
+                    tools:layout_editor_absoluteX="0dp" />
+
+                <RatingBar
+                    android:id="@+id/Estrelas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:rating="3" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Ingredientes: \n
+*12kg patinho ou coxão mole cortado em cubos \n
+*3 médias batatas cortadas em 4 pedaços \n
+*2 cenouras cortadas em 6 pedaços \n
+*2 mandioquinhas cortadas em 4 pedaços \n
+*1 cebola média cortada em rodelas \n
+*Alho a gosto \n
+*1 colher de café cheia de sal \n
+*Salsa e cebolinha a gosto \n
+*1 colher de sopa de extrato de tomate (ou 1 tomate batido) \n
+*1 colher de manteiga \n
+\n
+Preparo: \n
+1 - Coloque a carne, a cebola, o sal, salsa cebolinha, o alho, o extrato de tomate e a manteiga em uma panela de pressão \n
+2 - Cubra com água \n
+3 - Deixe cozinhar por 30 minutos \n
+4 - Retire a pressão, acrescente os demais ingredientes, tampe a panela e deixe por mais 15 minutos" />
+            </LinearLayout>
+        </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

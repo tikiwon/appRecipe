@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.asus.receitas">
+
+    <!-- Permissão para o aplicativo ter acesso a internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity.PrincipalActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.ForumActivity" />
+        <activity android:name=".Activity.CadastroUsuarioActivity" />
+        <activity
+            android:name=".Activity.Activity_Drawer"
+            android:label="@string/title_activity__drawer"
+            android:parentActivityName=".Activity.PrincipalActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.asus.receitas.Activity.PrincipalActivity" />
+        </activity>
+        <activity android:name=".Activity.ActivityReceitaParmegiana" />
+        <activity android:name=".Activity.ActivityReceitaPicadinho" />
+        <activity android:name=".Activity.ActivityReceitaMadeira" />
+        <activity android:name=".Activity.ActivityReceitaPudim" />
+        <activity android:name=".Activity.ActivityReceitaFrutas" />
+        <activity android:name=".Activity.ActivityReceitaChocolate" />
+        <activity android:name=".Activity.ActivityReceitaCaipirinha" />
+        <activity android:name=".Activity.ActivityReceitaEspanhola" />
+        <activity android:name=".Activity.ActivityReceitaCoquetel"></activity>
+    </application>
+
+</manifest>

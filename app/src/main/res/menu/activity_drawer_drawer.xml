@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_comida"
+            android:icon="@drawable/ic_menu_comida"
+            android:title="Receitas de Comida" />
+        <item
+            android:id="@+id/nav_sobremesa"
+            android:icon="@drawable/ic_menu_sobremesa"
+            android:title="Receitas de Sobremesa" />
+        <item
+            android:id="@+id/nav_batidas"
+            android:icon="@drawable/ic_menu_batida"
+            android:title="Receitas de Batidas" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_forum"
+                android:icon="@drawable/ic_menu_forum"
+                android:title="Mural" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>

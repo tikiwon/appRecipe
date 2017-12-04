@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.receitas.Activity.ActivityReceitaFrutas">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Salada de Frutas"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="239dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/frutas"
+                    tools:layout_editor_absoluteX="0dp" />
+
+                <RatingBar
+                    android:id="@+id/Estrelas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:rating="1.5" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Ingredientes: \n
+*1/2 lata de creme de leite \n
+*1/2 lata de leite condensado \n
+*5 bananas \n
+*4 laranjas \n
+*2 maçãs \n
+*1/2 mamão papaia \n
+*2 colheres de suco de limão \n
+*Açúcar a gosto \n
+\n
+Preparo: \n
+1 - Lave e corte as frutas em tamanho pequeno \n
+2 - Adicione o leite condensado, creme de leite, o suco de limão e o açúcar a gosto \n
+3 - Mexa bem e leve a geladeira por no mínimo 15 minutos \n
+4 - Sirva gelado \n
+5 - Obs: Pode ser usado outras frutas de sua preferência" />
+            </LinearLayout>
+        </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

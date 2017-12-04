@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.receitas.Activity.ActivityReceitaParmegiana">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Filé de Frango à Parmegiana"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="239dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/parmegiana"
+                    tools:layout_editor_absoluteX="0dp" />
+
+                <RatingBar
+                    android:id="@+id/Estrelas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:rating="4.5" />
+
+                <TextView
+                    android:id="@+id/IngrePrepa"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Ingredientes: \n
+*1/2 kg de filé de Frango \n
+*1 dente de alho picadinho \n
+*Suco de limão, ervas finas e sal a gosto \n
+*Óleo para fritar \n
+*2 ovos batidos com 1 pitada de sal \n
+*2 xícaras (chá) de farinha de rosca \n
+*1 cebola picadinha \n
+*2 tomates maduros picadinhos \n
+*1 caixinha de molho de tomate pronto \n
+*1/2 xicara (chá) de água \n
+*3 colheres (sopa) de azeite \n
+*1 tabletinho de caldo de galinha \n
+*Manjericão ou orégano a gosto \n
+\n
+Preparo do Filé: \n
+1 - Tempere os filés de frango com o alho, suco de limão, ervas finas e sal a gosto \n
+2 - Deixe na geladeira por 30 minutos \n
+3 - Após esse tempo, passe nos ovos batidos e na farinha de rosca \n
+4 - Frite em óleo não muito quente \n
+5 - Retire e deixe descansar sobre papel absorvente \n
+\n
+Preparo do Molho: \n
+1 - Doure a cebola no azeite, acrescente os tomates picadinhos, o molho pronto, a água e o caldo de galinha \n
+2 - Deixe apurar um pouco, desligue e acrescente o manjericão ou o orégano \n
+3 - Coloque os filés em um refratário \n
+4 - Cubra com a mussarela em fatias \n
+5 - Regue com o molho e leve ao forno bem quente, somente para derreter a mussarela \n
+6 - Retire e sirva" />
+
+            </LinearLayout>
+        </ScrollView>
+</android.support.constraint.ConstraintLayout>

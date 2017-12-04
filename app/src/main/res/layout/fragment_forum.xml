@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.receitas.Fragments.ForumFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mural de solicitações feitas"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/notification1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mensagem de Talita: \n
+Olá, gostaria de pedir a receita Escondidinho de carne seca, grato pelo sistema! Simples e prático! " />
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/notification2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mensagem de Carlos: \n
+Boa tarde, solicito a sobremesa Pavê de chocolate com morango!" />
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/notification3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mensagem de Gisele: \n
+Boa noite, queria a batida Pinã Colada, por favor!" />
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/notification4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mensagem de Gil: \n
+Oi, gostaria de solicitar a batida Pinã Colada, teria como?" />
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/notification5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mensagem de Rodrigo: \n
+Eu queria a comida Risoto de camarão!" />
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/notification6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mensagem de teste: \n
+Gostaria de pedir a receita Costela de Porco Assado!" />
+
+    </LinearLayout>
+
+</RelativeLayout>

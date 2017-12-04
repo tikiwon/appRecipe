@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Receitas</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Login</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">Email ou senha incorretos</string>
+    <string name="error_invalid_password">Email ou senha incorretos</string>
+    <string name="error_incorrect_password">Email ou senha incorretos</string>
+    <string name="error_field_required">Preencher campo</string>
+    <string name="permission_rationale">"Email ou senha incorretos"</string>
+    <string name="title_activity__drawer">Activity_Drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Strings related to register -->
+</resources>
