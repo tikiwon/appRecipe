@@ -72,5 +72,5 @@ Fragments
        //instancia o objeto mural e seta os valores e faz o envio e tratamento de erro do firebase
        private void enviaDadosSolicitacaoReceita()
        
-       ![alt text](https://cdn57.androidauthority.net/wp-content/uploads/2017/05/android-studio-logo-840x359.png)
 
+![alt text](https://cdn57.androidauthority.net/wp-content/uploads/2017/05/android-studio-logo-840x359.png)
